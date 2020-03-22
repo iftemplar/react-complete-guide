@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hello</h1>
-        <Dog name='Rumba' age='4' />
+        <Dog name='Rumba' age='4'>She likes to walk three times a day</Dog>
         <Dog name='Mishka' age='1' />
         <Dog name='Niusha' age='1' />
       </div>

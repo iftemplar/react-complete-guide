@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Dog = (props) => {
-return <div>{props.name} the dog. The dog is {props.age} years old</div>
+return (
+    <section>
+        <div>{props.name} the dog. The dog is {props.age} years old. <span>{props.children}</span></div>
+    </section>
+    )
 }
 
 export default Dog;
