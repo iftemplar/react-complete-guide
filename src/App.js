@@ -10,13 +10,33 @@ class App extends Component {
             {name: 'Rumba', age: 4},
             {name: 'Mishka', age: 2},
             {name: 'Niusha', age: 1}
-            ]
+        ]
+    }
+
+    // method
+    btnClickHandler  = () => {
+        console.log('Btn clicked');
+    }
+
+    copiedHandler = () => {
+        console.log('Copy!');
+    }
+
+    linkClickHandler = (e) => {
+        e.preventDefault();
+        console.log('linkClickHandler');
+    }
+
+    contextMenuHandler = () => {
+        console.log('contextMenuHandler')
     }
 
       render() {
         return (
-          <div className="App">
-            <h1>Hello</h1>
+          <div className="App" onCopy={this.copiedHandler} onContextMenu={this.contextMenuHandler}>
+            <h1 >Hello</h1>
+              <button onClick={this.btnClickHandler}>Click me</button>
+              <a href="https://iftemplar.com" onClick={this.linkClickHandler}>Link</a>
             <Dog name={this.state.doggos[0].name} age={this.state.doggos[0].age}>She likes to walk three times a day</Dog>
             <Dog name={this.state.doggos[1].name} age={this.state.doggos[1].age} />
             <Dog name={this.state.doggos[2].name} age={this.state.doggos[2].age} />
