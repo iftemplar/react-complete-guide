@@ -10,13 +10,19 @@ class App extends Component {
             {name: 'Rumba', age: 4},
             {name: 'Mishka', age: 2},
             {name: 'Niusha', age: 1}
-            ]
+        ]
+    }
+
+    // method
+    btnClickHandler  = () => {
+        console.log('Btn clicked');
     }
 
       render() {
         return (
           <div className="App">
             <h1>Hello</h1>
+              <button onClick={this.btnClickHandler}>Click me</button>
             <Dog name={this.state.doggos[0].name} age={this.state.doggos[0].age}>She likes to walk three times a day</Dog>
             <Dog name={this.state.doggos[1].name} age={this.state.doggos[1].age} />
             <Dog name={this.state.doggos[2].name} age={this.state.doggos[2].age} />
