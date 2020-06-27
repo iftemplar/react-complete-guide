@@ -15,7 +15,15 @@ class App extends Component {
 
     // method
     btnClickHandler  = () => {
+        // this.state.doggos[0].name = 'Rumbiton';
         console.log('Btn clicked');
+        this.setState({
+            doggos: [
+                {name: 'Rumbiton', age: 4},
+                {name: 'Mishka', age: 3},
+                {name: 'Niusha', age: 2}
+            ]
+        })
     }
 
     copiedHandler = () => {
