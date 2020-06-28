@@ -43,7 +43,7 @@ class App extends Component {
         return (
           <div className="App" onCopy={this.copiedHandler} onContextMenu={this.contextMenuHandler}>
             <h1 >Hello</h1>
-              <button onClick={this.btnClickHandler}>Click me</button>
+              <button onClick={()=> this.btnClickHandler('Rumbiyovych')}>Click me</button>
               <a href="https://iftemplar.com" onClick={this.linkClickHandler}>Link</a>
 
             <Dog
