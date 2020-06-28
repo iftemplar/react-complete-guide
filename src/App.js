@@ -11,7 +11,7 @@ class App extends Component {
             {name: 'Mishka', age: 2},
             {name: 'Niusha', age: 1}
         ]
-    }
+    };
 
     // method
     btnClickHandler  = (newName) => {
@@ -24,20 +24,33 @@ class App extends Component {
                 {name: 'Niusha', age: 2}
             ]
         })
-    }
+    };
+
+    // reacts on input type
+    nameChangedHandler = (event) => {
+        console.log(event);
+        console.log(event.target);
+        this.setState({
+            doggos: [
+                {name: 'Rumba', age: 4},
+                {name:  event.target.value, age: 3},
+                {name: 'Niusha', age: 1}
+            ]
+        })
+    };
 
     copiedHandler = () => {
         console.log('Copy!');
-    }
+    };
 
     linkClickHandler = (e) => {
         e.preventDefault();
         console.log('linkClickHandler');
-    }
+    };
 
     contextMenuHandler = () => {
         console.log('contextMenuHandler')
-    }
+    };
 
       render() {
         return (
@@ -52,7 +65,12 @@ class App extends Component {
                 click={this.btnClickHandler.bind(this, 'Rumbiterto')}>  {/* this binds this to current JS class */}
                 She likes to walk three times a day
             </Dog>
-            <Dog name={this.state.doggos[1].name} age={this.state.doggos[1].age} />
+
+            <Dog
+                name={this.state.doggos[1].name}
+                age={this.state.doggos[1].age}
+                changed={this.nameChangedHandler}/>
+
             <Dog name={this.state.doggos[2].name} age={this.state.doggos[2].age} />
           </div>
         );
