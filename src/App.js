@@ -45,7 +45,12 @@ class App extends Component {
             <h1 >Hello</h1>
               <button onClick={this.btnClickHandler}>Click me</button>
               <a href="https://iftemplar.com" onClick={this.linkClickHandler}>Link</a>
-            <Dog name={this.state.doggos[0].name} age={this.state.doggos[0].age}>She likes to walk three times a day</Dog>
+            <Dog
+                name={this.state.doggos[0].name}
+                age={this.state.doggos[0].age}
+                click={this.btnClickHandler}>
+                She likes to walk three times a day
+            </Dog>
             <Dog name={this.state.doggos[1].name} age={this.state.doggos[1].age} />
             <Dog name={this.state.doggos[2].name} age={this.state.doggos[2].age} />
           </div>
